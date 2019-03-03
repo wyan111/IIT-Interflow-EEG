@@ -1,9 +1,9 @@
 %bipolar re-referencing
-channel_data = load('ch170719.mat');
+channel_data = load('ch170722.mat');
 data = channel_data.EEG_all;
 BR_data = {};
 for i = 1:6
-    for j = 1:5
+    for j = 1:6
         ch_d = cell2mat(data(i,j));
         br_d = [];
         %left
@@ -75,3 +75,4 @@ for i = 1:6
         BR_data(i,j) = {br_d};
     end
 end
+save('brch170722.mat','BR_data')
